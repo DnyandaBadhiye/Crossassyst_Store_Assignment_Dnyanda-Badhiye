@@ -2,48 +2,36 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="57974" started-at="2020-08-20T01:42:35 IST" finished-at="2020-08-20T01:43:33 IST">
+  <suite name="Default suite" duration-ms="55504" started-at="2020-08-20T10:40:36 IST" finished-at="2020-08-20T10:41:32 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="57974" started-at="2020-08-20T01:42:35 IST" finished-at="2020-08-20T01:43:33 IST">
+    <test name="Default test" duration-ms="55504" started-at="2020-08-20T10:40:36 IST" finished-at="2020-08-20T10:41:32 IST">
       <class name="com.store.tests.Login_Test">
-        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.store.tests.Login_Test@2b9627bc]" name="launchApp" is-config="true" duration-ms="12919" started-at="2020-08-20T01:42:35 IST" finished-at="2020-08-20T01:42:48 IST">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.store.tests.Login_Test@2b9627bc]" name="launchApp" is-config="true" duration-ms="20595" started-at="2020-08-20T10:40:36 IST" finished-at="2020-08-20T10:40:57 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method status="FAIL" signature="validLogin()[pri:0, instance:com.store.tests.Login_Test@2b9627bc]" name="validLogin" duration-ms="44267" started-at="2020-08-20T01:42:48 IST" finished-at="2020-08-20T01:43:32 IST">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
+        <test-method status="FAIL" signature="validLogin()[pri:0, instance:com.store.tests.Login_Test@2b9627bc]" name="validLogin" duration-ms="34005" started-at="2020-08-20T10:40:57 IST" finished-at="2020-08-20T10:41:31 IST">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=84.0.4147.135)
+              <![CDATA[Cannot locate an element using xpath=//a[@id='2_7_0_363687']/i
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'LAPTOP-5J3Q3F58', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_152'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\SPRUHA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61356}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 11851e4458088ce8644c0d037df3f4c0]]>
+System info: host: 'LAPTOP-5J3Q3F58', ip: '192.168.43.133', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_152'
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=84.0.4147.135)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//a[@id='2_7_0_363687']/i
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'LAPTOP-5J3Q3F58', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_152'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\SPRUHA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61356}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 11851e4458088ce8644c0d037df3f4c0
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at com.store.pages.Login_Page.ValidProductData(Login_Page.java:102)
-at com.store.tests.Login_Test.validLogin(Login_Test.java:52)
+System info: host: 'LAPTOP-5J3Q3F58', ip: '192.168.43.133', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_152'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at com.store.pages.Login_Page.ValidProductData(Login_Page.java:108)
+at com.store.tests.Login_Test.validLogin(Login_Test.java:45)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -74,11 +62,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLogin -->
-        <test-method status="PASS" signature="tierdown()[pri:0, instance:com.store.tests.Login_Test@2b9627bc]" name="tierdown" is-config="true" duration-ms="748" started-at="2020-08-20T01:43:32 IST" finished-at="2020-08-20T01:43:33 IST">
+        <test-method status="PASS" signature="tierdown()[pri:0, instance:com.store.tests.Login_Test@2b9627bc]" name="tierdown" is-config="true" duration-ms="858" started-at="2020-08-20T10:41:31 IST" finished-at="2020-08-20T10:41:32 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tierdown -->

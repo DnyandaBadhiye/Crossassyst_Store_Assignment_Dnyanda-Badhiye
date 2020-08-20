@@ -37,7 +37,7 @@ By Addr_txt_mobile=By.id("phone_mobile");
 By Addr_txt_addr_alias=By.id("alias");
 By btn_register=By.xpath("//button[@id='submitAccount']/span");
 
-  public void validLogin(String email, String Password , String Firstname, String Lastname, String email_1 ,String day, String month, String year) {
+  public void validLogin(String email, String Password , String Firstname,String Lastname,String day ,String month,String year, String email_1 ) {
     try {
     driver.findElement(By.linkText("Sign in")).click();
     Thread.sleep(3000);
@@ -46,22 +46,21 @@ By btn_register=By.xpath("//button[@id='submitAccount']/span");
 	driver.findElement(By.xpath("//button[@id='SubmitCreate']/span")).click();
 	Thread.sleep(3000);
     driver.findElement(By.id("id_gender2")).click();
+    driver.findElement(By.id("customer_firstname")).click();
     driver.findElement(By.id("customer_firstname")).clear();
 	driver.findElement(By.id("customer_firstname")).sendKeys(Firstname);
+	driver.findElement(By.id("customer_lastname")).click();
 	driver.findElement(By.id("customer_lastname")).clear();
 	driver.findElement(By.id("customer_lastname")).sendKeys(Lastname);
+	driver.findElement(By.id("email")).click();
 	driver.findElement(By.id("email")).clear();
 	driver.findElement(By.id("email")).sendKeys(email_1);
+	driver.findElement(By.id("passwd")).click();
+    driver.findElement(By.id("passwd")).clear();
 	driver.findElement(By.id("passwd")).sendKeys(Password);
-	driver.findElement(By.id("days")).click();
-    new Select(driver.findElement(By.id("days"))).selectByVisibleText("3");
-    driver.findElement(By.id("days")).click();
-    driver.findElement(By.id("months")).click();
-    new Select(driver.findElement(By.id("months"))).selectByVisibleText("May");
-    driver.findElement(By.id("months")).click();
-    driver.findElement(By.id("years")).click();
-    new Select(driver.findElement(By.id("years"))).selectByVisibleText("2003");
-    driver.findElement(By.id("years")).click();
+	driver.findElement(By.xpath("//*[@id=\"days\"]")).sendKeys("3");
+    driver.findElement(By.id("months")).sendKeys("May");
+    driver.findElement(By.id("years")).sendKeys("2000");
     }
 	catch(Exception e)
     {
@@ -70,18 +69,20 @@ By btn_register=By.xpath("//button[@id='submitAccount']/span");
     }
 	
 }
- public void ValidLoginAddressData(String Firstname1,String Lastname1, String Address,String Company,String City,String State,String PostCode ,String Country, String Other,String Mobile,String Addr) {
+ public void ValidLoginAddressData(String Firstname1,String Lastname1, String Address,String City,String State,String PostCode ,String Country, String Other,String Addr) {
 	try {
+	driver.findElement(By.id("firstname")).click();
+	driver.findElement(By.id("firstname")).clear();	
 	driver.findElement(By.id("firstname")).sendKeys(Firstname1);
+	driver.findElement(By.id("lastname")).clear();
 	driver.findElement(By.id("lastname")).sendKeys(Lastname1); 
-	driver.findElement(By.id("company")).sendKeys(Company);
 	driver.findElement(By.id("address1")).sendKeys(Address);
 	driver.findElement(By.id("city")).sendKeys(City);
 	driver.findElement(By.id("id_state")).sendKeys(State);
 	driver.findElement(By.id("postcode")).sendKeys(PostCode);
 	driver.findElement(By.id("id_country")).sendKeys(Country);
 	driver.findElement(By.id("other")).sendKeys(Other);
-	driver.findElement(By.id("phone_mobile")).sendKeys(Mobile);
+	driver.findElement(By.id("phone_mobile")).sendKeys("7028797345");
 	driver.findElement(By.id("alias")).sendKeys(Addr);
 	driver.findElement(By.xpath("//button[@id='submitAccount']/span")).click();
 	Thread.sleep(2000);
@@ -96,10 +97,8 @@ By btn_register=By.xpath("//button[@id='submitAccount']/span");
 public void ValidProductData(String quantity ) throws InterruptedException {
 	
 	driver.findElement(By.linkText("Women")).click();
-	WebElement Element = driver.findElement(By.xpath("//div[@id='center_column']/ul/li[2]/div/div/div/a[2]/span"));
-	JavascriptExecutor js=(JavascriptExecutor)driver;
-	js.executeScript("arguments[0].scrollIntoView();",Element);
-	Element.click();
+	driver.findElement(By.id("layered_quantity_1")).click();
+	driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[2]/div/div[1]/div/a[1]/img")).click();
 	driver.switchTo().frame(0);
 	driver.findElement(By.xpath("//p[@id='quantity_wanted_p']/a[2]/span")).click();
     driver.findElement(By.id("group_1")).click();
@@ -119,6 +118,7 @@ public void ValidProductData(String quantity ) throws InterruptedException {
 	driver.findElement(By.id("cgv")).click();
 	driver.findElement(By.xpath("//form[@id='form']/p/button/span")).click();
 	driver.findElement(By.xpath("//a[@id='button_order_cart']/span")).click();
+	
 	driver.findElement(By.linkText("Sign out")).click();
 	
 	}

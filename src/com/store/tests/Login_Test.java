@@ -1,18 +1,11 @@
 package com.store.tests;
- 
-import static org.testng.Assert.fail;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -47,8 +40,8 @@ Properties prop= new Properties();
 FileInputStream fis= new FileInputStream(System.getProperty("user.dir")+"/src/com/store/common/config.properties");
 prop.load(fis); 
 Login_Page lp= new Login_Page(driver);
-lp.validLogin(prop.getProperty("email"),prop.getProperty("Password"),prop.getProperty("Firstname"),prop.getProperty("Lastname"),prop.getProperty("email_1"),prop.getProperty("day"),prop.getProperty("month"),prop.getProperty("year"));
-lp.ValidLoginAddressData(prop.getProperty("Firstname"),prop.getProperty("Lastname"),prop.getProperty("Address"),prop.getProperty("Company"),prop.getProperty("City"),prop.getProperty("State"),prop.getProperty("PostCode"),prop.getProperty("Country"),prop.getProperty("Other"),prop.getProperty("Mobileno"),prop.getProperty("Addr"));
+lp.validLogin(prop.getProperty("email"),prop.getProperty("Firstname"),prop.getProperty("Lastname"),prop.getProperty("email_1"),prop.getProperty("Password"),prop.getProperty("day"),prop.getProperty("month"),prop.getProperty("year"));
+lp.ValidLoginAddressData(prop.getProperty("Firstname1"),prop.getProperty("Lastname1"),prop.getProperty("Address"),prop.getProperty("City"),prop.getProperty("State"),prop.getProperty("PostCode"),prop.getProperty("Country"),prop.getProperty("Other"),prop.getProperty("Addr"));
 lp.ValidProductData(prop.getProperty("quantity"));
 JavascriptExecutor js=(JavascriptExecutor)driver;
 js.executeScript("window.scrollBy(0,2000)","");
